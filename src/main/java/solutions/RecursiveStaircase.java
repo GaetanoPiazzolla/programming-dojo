@@ -1,3 +1,5 @@
+package solutions;
+
 public class RecursiveStaircase {
 
     public static int n_ways(int n) {

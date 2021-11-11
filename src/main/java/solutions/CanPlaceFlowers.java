@@ -1,33 +1,35 @@
+package solutions;
+
 public class CanPlaceFlowers {
 
     /**
-     * You have a long flowerbed in which some of the plots are planted, and some are not.
+     * You have a long prato in which some of the plots are planted, and some are not.
      * However, flowers cannot be planted in adjacent plots.
      * <p>
-     * Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1means not empty,
-     * and an integer n, return if n new flowers can be planted in the flowerbed
+     * Given an integer array prato containing 0's and 1's, where 0 means empty and 1means not empty,
+     * and an integer n, return if n new flowers can be planted in the prato
      * without violating the no-adjacent-flowers rule.
      */
-    public static boolean canPlaceFlowers(int[] flowerbed, int n) {
+    public static boolean canPlaceFlowers(int[] prato, int n) {
 
         if (n == 0) {
             return true;
         }
 
-        if (flowerbed == null || flowerbed.length == 0) {
+        if (prato == null || prato.length == 0) {
             return false;
         }
 
-        for (int i = 0; i < flowerbed.length ; i++) {
+        for (int i = 0; i < prato.length ; i++) {
 
-            if(flowerbed[i] == 0 && (
-                    i == flowerbed.length -1 || flowerbed[i+1] == 0))
+            if(prato[i] == 0 && (
+                    i == prato.length -1 || prato[i+1] == 0))
             {
                 n--;
                 i++;
             }
 
-            else if(flowerbed[i]==1){
+            else if(prato[i]==1){
                 i++;
             }
 
