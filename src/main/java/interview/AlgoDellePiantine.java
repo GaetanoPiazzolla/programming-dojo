@@ -1,4 +1,4 @@
-package problems;
+package interview;
 
 public class AlgoDellePiantine {
 
@@ -21,7 +21,6 @@ public class AlgoDellePiantine {
         System.out.println("false-" + possoMetterePiantine(new int[]{1}, 1));
         System.out.println("false-" + possoMetterePiantine(new int[]{1, 0}, 1));
         System.out.println("false-" + possoMetterePiantine(new int[]{1, 0, 1, 0, 1, 0, 0, 1, 0}, 1));
-
         System.out.println("true-" + possoMetterePiantine(new int[]{1, 0, 0, 0, 1}, 1));
         System.out.println("true-" + possoMetterePiantine(new int[]{0}, 1));
         System.out.println("true-" + possoMetterePiantine(new int[]{1}, 0));

@@ -1,6 +1,6 @@
-package solutions;
 
-public class ValidMountainArray {
+
+public class MountainArray {
 
     /**
      * Given an array of integers arr, return true if and only if it is a valid mountain array.
@@ -38,14 +38,14 @@ public class ValidMountainArray {
 
             else if (arr[i] > arr[i + 1]) {
                 desc = true;
-                if (asc == false) {
+                if (!asc) {
                     return false;
                 }
             }
 
             else {
                 asc = true;
-                if (desc == true) {
+                if (desc) {
                     return false;
                 }
             }
@@ -59,13 +59,10 @@ public class ValidMountainArray {
         System.out.println("false: " + validMountainArray(new int[]{3,5,5}));
         System.out.println("false: " + validMountainArray(new int[]{0,3,3,1}));
         System.out.println("false: " + validMountainArray(new int[]{3,1,3,1}));
-
         System.out.println("false: " + validMountainArray(new int[]{0,1,2}));
         System.out.println("false: " + validMountainArray(new int[]{0,1,2,3,4,5,5,3,2,1,0}));
-
         System.out.println("true: " + validMountainArray(new int[]{0,1,2,3,4,5,4,3,2,1,0}));
         System.out.println("true: " + validMountainArray(new int[]{0,3,2,1}));
-
     }
 
 }

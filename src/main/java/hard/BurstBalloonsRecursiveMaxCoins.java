@@ -71,7 +71,6 @@ public class BurstBalloonsRecursiveMaxCoins {
 
         int dp[][] = new int[n + 1][n + 1];
 
-
         for (int len = 1; len <= n; len++) {
 
             for (int i = 0; i < n - len + 1; i++) {
@@ -101,7 +100,6 @@ public class BurstBalloonsRecursiveMaxCoins {
             }
 
         }
-
 
         return dp[0][n - 1];
     }

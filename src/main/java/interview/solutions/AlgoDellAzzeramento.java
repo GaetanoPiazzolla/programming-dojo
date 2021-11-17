@@ -1,6 +1,6 @@
-package solutions;
+package interview.solutions;
 
-public class BinaryToZero {
+public class AlgoDellAzzeramento {
 
     public static int solution(String S) {
 
@@ -23,7 +23,7 @@ public class BinaryToZero {
 
     }
 
-    public static int soluzioneBinaria(String S) {
+    public static int soluzioneBruteForce(String S) {
 
         int operations = 0;
 

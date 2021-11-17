@@ -1,9 +1,8 @@
-package solutions;
+package interview.solutions;
 
 import java.util.*;
 
-public class Morse {
-
+public class AlgoDelMorse {
 
     public int uniqueMorseRepresentations(String[] words) {
 
@@ -56,48 +55,23 @@ public class Morse {
         morse.put('y', "-.--");
         morse.put('z', "--..");
 
-        String[] soluzioni = new String[words.length];
+        Set<String> solutions = new HashSet<>();
 
-        int j = 0;
         for (String word : words) {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < word.length(); i++) {
                 sb.append(morse.get(word.charAt(i)));
             }
-            soluzioni[j] = sb.toString();
-            j++;
+            solutions.add(sb.toString());
         }
 
-        Arrays.sort(soluzioni);
-
-        return removeDuplicateElements(soluzioni, soluzioni.length);
-
+        return solutions.size();
     }
-
-    public static int removeDuplicateElements(String[] arr, int n) {
-        if (n == 0 || n == 1) {
-            return n;
-        }
-        String[] temp = new String[n];
-        int j = 0;
-        for (int i = 0; i < n - 1; i++) {
-            if (!arr[i].equals(arr[i + 1])) {
-                temp[j++] = arr[i];
-            }
-        }
-        temp[j++] = arr[n - 1];
-        // Changing original array
-        for (int i = 0; i < j; i++) {
-            arr[i] = temp[i];
-        }
-        return j;
-    }
-
 
     public static void main(String[] args) {
 
-        Morse m = new Morse();
-        System.out.println(m.uniqueMorseRepresentations(new String[]{"gin","zen","gig","msg"}));
+        AlgoDelMorse m = new AlgoDelMorse();
+        System.out.println(m.uniqueMorseRepresentations2(new String[]{"gin","zen","gig","msg"}));
 
     }
 
