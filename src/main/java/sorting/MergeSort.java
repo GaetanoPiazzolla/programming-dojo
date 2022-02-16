@@ -5,6 +5,10 @@ import java.util.Arrays;
 public class MergeSort {
 
 
+    // Time: o(n*log(n))
+    // Space: o(n)
+
+    // It goes through the whole process even if the array is sorted.
     public static void main(String[] args) {
 
         int[] array = new int[]{5,4,3,2,1};
