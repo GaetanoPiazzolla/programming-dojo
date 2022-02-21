@@ -1,4 +1,4 @@
-package interview.solutions;
+package my_interviews.solutions;
 
 import java.util.HashMap;
 import java.util.HashSet;

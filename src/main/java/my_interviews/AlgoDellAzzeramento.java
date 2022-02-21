@@ -1,4 +1,4 @@
-package interview;
+package my_interviews;
 
 public class AlgoDellAzzeramento {
 
