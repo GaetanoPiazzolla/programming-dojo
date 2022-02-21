@@ -17,8 +17,7 @@ public class DuplicateNumFloyd {
             fast = nums[nums[fast]];
         } while (slow != fast);
 
-        while (true)
-        {
+        while (true) {
             slow = nums[slow];
             finder = nums[finder];
             if (slow == finder)
@@ -26,10 +25,10 @@ public class DuplicateNumFloyd {
         }
     }
 
-    public static void main(String[] args){
-        System.out.println(findDuplicate(new int[]{1,1,2}));
-        System.out.println(findDuplicate(new int[]{1,1,2,3,4,5,6}));
-        System.out.println(findDuplicate(new int[]{1,2,3,4,5,6,6}));
+    public static void main(String[] args) {
+        System.out.println(findDuplicate(new int[]{1, 1, 2}));
+        System.out.println(findDuplicate(new int[]{1, 1, 2, 3, 4, 5, 6}));
+        System.out.println(findDuplicate(new int[]{1, 2, 3, 4, 5, 6, 6}));
     }
 
 }

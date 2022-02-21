@@ -18,7 +18,7 @@ public class IncreasingOrderSearchThree {
 
     private static void rearrangeNode(TreeNode node) {
 
-        if(node!=null){
+        if (node != null) {
 
             rearrangeNode(node.left);
 
@@ -49,8 +49,7 @@ public class IncreasingOrderSearchThree {
 
     private static void printNode(TreeNode root) {
 
-        if(root!=null)
-        {
+        if (root != null) {
             System.out.println(root.val);
             printNode(root.left);
             printNode(root.right);

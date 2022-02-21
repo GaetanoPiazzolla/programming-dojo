@@ -2,8 +2,6 @@ package crackingiw;
 
 import structures.TreeNode;
 
-import java.util.HashMap;
-
 import static crackingiw.MinimalTree.treeBinarizeOrderedArray;
 
 public class IsTreeBalanced {

@@ -78,8 +78,8 @@ public class AddTwoNumbers {
         sum = addTwoNumbers(first, second);
         printNode(sum); // 99
 
-        first = new ListNode(9, new ListNode(0,new ListNode(9)));
-        second = new ListNode(9,new ListNode(0,new ListNode(9)));
+        first = new ListNode(9, new ListNode(0, new ListNode(9)));
+        second = new ListNode(9, new ListNode(0, new ListNode(9)));
         sum = addTwoNumbers(first, second);
         printNode(sum); // 8181
 
@@ -91,7 +91,7 @@ public class AddTwoNumbers {
             b.append(sum.val);
             sum = sum.next;
         }
-        System.out.println(b.toString());
+        System.out.println(b);
     }
 
 }

@@ -3,7 +3,7 @@ public class Palindrome {
 
     public static String solution(String S) {
 
-        if(S == null || S.isEmpty() ) {
+        if (S == null || S.isEmpty()) {
             return "NO";
         }
 
@@ -14,19 +14,18 @@ public class Palindrome {
         char middle = S.charAt(S.length() / 2) == '?' ? 'a' : S.charAt(S.length() / 2);
         anyPalidrome[S.length() / 2] = middle;
 
-        for(int i=0; i < S.length() / 2; i++) {
+        for (int i = 0; i < S.length() / 2; i++) {
 
-            Character equalChar = getEqualCharacter(S.charAt(i),S.charAt(S.length() -1 -i));
-            if(equalChar!=null) {
-                anyPalidrome[i]=equalChar;
-                anyPalidrome[S.length()-1-i] = equalChar;
-            }
-            else {
+            Character equalChar = getEqualCharacter(S.charAt(i), S.charAt(S.length() - 1 - i));
+            if (equalChar != null) {
+                anyPalidrome[i] = equalChar;
+                anyPalidrome[S.length() - 1 - i] = equalChar;
+            } else {
                 notEquals = true;
             }
         }
 
-        if(!notEquals) {
+        if (!notEquals) {
             return new String(anyPalidrome);
         }
 
@@ -36,23 +35,15 @@ public class Palindrome {
 
     private static Character getEqualCharacter(char first, char last) {
 
-        if(first == '?' && last == '?') {
+        if (first == '?' && last == '?') {
             return 'a';
-        }
-
-        else if(first == last) {
+        } else if (first == last) {
             return first;
-        }
-
-        else if (first == '?') {
+        } else if (first == '?') {
             return last;
-        }
-
-        else if(last == '?') {
+        } else if (last == '?') {
             return first;
-        }
-
-        else{
+        } else {
             return null;
         }
 
@@ -72,7 +63,7 @@ public class Palindrome {
         abc = "?";
         System.out.println(Palindrome.solution(abc));
 
-         abc = "?ab??a";
+        abc = "?ab??a";
         System.out.println(Palindrome.solution(abc));
 
         abc = "z";

@@ -42,7 +42,7 @@ public class PalindromePartitioning {
 
     public static void main(String[] args) {
 
-            System.out.println(partition("cacca"));
+        System.out.println(partition("cacca"));
 
     }
 

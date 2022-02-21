@@ -33,7 +33,7 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] array = { 1, 5, 3, 4, 5 };
+        int[] array = {1, 5, 3, 4, 5};
         SelectionSort.sort(array);
         System.out.println(Arrays.toString(array));
     }

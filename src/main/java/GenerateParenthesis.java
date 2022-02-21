@@ -17,6 +17,11 @@ import java.util.List;
  */
 public class GenerateParenthesis {
 
+    public static void main(String[] args) {
+        GenerateParenthesis p = new GenerateParenthesis();
+        System.out.println(p.generateParenthesis(4));
+    }
+
     public List<String> generateParenthesis(int n) {
         List<String> results = new ArrayList<>();
         recursive(results, n, 0, 0, "");
@@ -37,11 +42,6 @@ public class GenerateParenthesis {
         if (opened > closed) {
             recursive(results, n, closed + 1, opened, current + ')');
         }
-    }
-
-    public static void main(String[] args) {
-        GenerateParenthesis p = new GenerateParenthesis();
-        System.out.println(p.generateParenthesis(4));
     }
 
 }

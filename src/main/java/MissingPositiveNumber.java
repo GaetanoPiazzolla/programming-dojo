@@ -19,10 +19,10 @@ public class MissingPositiveNumber {
         int i = 0;
         for (; i < arr.length - 1; i++) {
 
-            int diff = k - ( arr[i + 1] - arr[i] - 1 );
+            int diff = k - (arr[i + 1] - arr[i] - 1);
 
             if (diff <= 0) {
-                return arr[i] + k ;
+                return arr[i] + k;
             }
 
             k = diff;

@@ -3,15 +3,13 @@ package interview;
 public class AlgoUltimoProgetto {
 
     /**
-     *
      * DXC ha N sviluppatori ed M progetti.
-     *
+     * <p>
      * Gli sviluppatori sono seduti intorno ad un tavolo.
-     *
+     * <p>
      * Bisogna assegnare ad ogni sviluppatore un progetto alla volta, fin quando non sono terminati, partendo dallo sviluppatore S.
-     *
+     * <p>
      * Iniziando con lo sviluppatore S, determinare chi riceve l'ultimo progetto.
-     *
      */
     public static int ultimoProgetto(int n, int m, int s) {
         return 0;

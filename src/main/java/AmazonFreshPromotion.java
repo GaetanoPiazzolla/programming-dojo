@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class AmazonFreshPromotion {
 
@@ -14,7 +17,7 @@ public class AmazonFreshPromotion {
 
         // ------------------------------------
 
-        first = Arrays.asList("apple","apple");
+        first = Arrays.asList("apple", "apple");
         second = Arrays.asList("banana", "anything", "banana");
         codeList = Arrays.asList(first, second);
         shoppingCart = Arrays.asList("banana", "orange", "banana", "apple", "apple");
@@ -23,7 +26,7 @@ public class AmazonFreshPromotion {
 
         // ------------------------------------
 
-        first = Arrays.asList("apple","apple");
+        first = Arrays.asList("apple", "apple");
         second = Arrays.asList("banana", "anything", "banana");
         codeList = Arrays.asList(first, second);
         shoppingCart = Arrays.asList("apple", "banana", "apple", "banana", "orange", "banana");
@@ -32,7 +35,7 @@ public class AmazonFreshPromotion {
 
         // ------------------------------------
 
-        first = Arrays.asList("apple","apple");
+        first = Arrays.asList("apple", "apple");
         second = Arrays.asList("apple", "apple", "banana");
         codeList = Arrays.asList(first, second);
         shoppingCart = Arrays.asList("apple", "apple", "apple", "banana");
@@ -43,9 +46,9 @@ public class AmazonFreshPromotion {
     public static int winPrize(List<List<String>> codeList, List<String> shoppingCart) {
 
         // checking corner cases
-        if(codeList == null || codeList.size() == 0)
+        if (codeList == null || codeList.size() == 0)
             return 1;
-        if(shoppingCart == null || shoppingCart.size() == 0)
+        if (shoppingCart == null || shoppingCart.size() == 0)
             return 0;
 
         int i = 0; // loops trough code lists
@@ -54,7 +57,7 @@ public class AmazonFreshPromotion {
         while (i < codeList.size() && j + codeList.get(i).size() <= shoppingCart.size()) {
             boolean match = true;
             for (int k = 0; k < codeList.get(i).size(); k++) {
-                if (!codeList.get(i).get(k).equals("anything") && !shoppingCart.get(j+k).equals(codeList.get(i).get(k))) {
+                if (!codeList.get(i).get(k).equals("anything") && !shoppingCart.get(j + k).equals(codeList.get(i).get(k))) {
                     match = false;
                     break;
                 }
@@ -99,20 +102,16 @@ public class AmazonFreshPromotion {
 
         for (int j = 0; j < subarray.size(); j++) {
 
-            if(subarray.get(j).equals(array.get(0)))
-            {
+            if (subarray.get(j).equals(array.get(0))) {
                 int found = 1;
 
-                for(int i=1; i<array.size() && i+j < subarray.size() ;i++)
-                {
-                    if(subarray.get(j+i).equals(array.get(i)) || array.get(i).equals("anything"))
-                    {
+                for (int i = 1; i < array.size() && i + j < subarray.size(); i++) {
+                    if (subarray.get(j + i).equals(array.get(i)) || array.get(i).equals("anything")) {
                         found++;
                     }
                 }
 
-                if(found == array.size())
-                {
+                if (found == array.size()) {
                     return j;
                 }
 

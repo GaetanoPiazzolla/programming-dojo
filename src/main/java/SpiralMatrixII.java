@@ -8,7 +8,7 @@ public class SpiralMatrixII {
     /**
      * Input: n = 3
      * Output: [[1,2,3],[8,9,4],[7,6,5]]
-     *
+     * <p>
      * Input: n = 1
      * Output: [[1]]
      */
@@ -19,38 +19,36 @@ public class SpiralMatrixII {
         int value = 1;
         int totNumbers = n * n;
 
-        int right =n;
-        int bottom=n;
-        int left=0;
-        int top=0;
+        int right = n;
+        int bottom = n;
+        int left = 0;
+        int top = 0;
 
         matrix[0][0] = value;
 
-        int y=0 , x=0;
+        int y = 0, x = 0;
 
         while (value < totNumbers) {
 
-            while(x < right - 1){
+            while (x < right - 1) {
                 x++;
                 matrix[y][x] = ++value;
             }
             top++;
 
-            while(y < bottom - 1){
+            while (y < bottom - 1) {
                 y++;
                 matrix[y][x] = ++value;
             }
             right--;
 
-            while(x > left)
-            {
+            while (x > left) {
                 x--;
                 matrix[y][x] = ++value;
             }
             bottom--;
 
-            while(y > top)
-            {
+            while (y > top) {
                 y--;
                 matrix[y][x] = ++value;
             }

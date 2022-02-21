@@ -30,11 +30,10 @@ public class LinkedListSum {
             int value1 = 0;
             int value2 = 0;
 
-            if(sizeDiff>0) {
+            if (sizeDiff > 0) {
                 value1 = array1.get(i);
                 value2 = i - sizeDiff >= 0 ? array2.get(i - sizeDiff) : 0;
-            }
-            else{
+            } else {
                 value1 = i + sizeDiff >= 0 ? array1.get(i + sizeDiff) : 0;
                 value2 = array2.get(i);
             }
@@ -69,7 +68,7 @@ public class LinkedListSum {
                         new ListNode(3)));
         ListNode l2 = new ListNode(1,
                 new ListNode(2));
-        System.out.println("123+12= 135 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("123+12= 135 : " + addTwoNumbers(l1, l2).toString());
 
 
         l1 = new ListNode(1,
@@ -78,8 +77,8 @@ public class LinkedListSum {
                                 new ListNode(9,
                                         new ListNode(9)))));
         l2 = new ListNode(3,
-                new ListNode(9,new ListNode(9)));
-        System.out.println("12399+399= 12798 : "+addTwoNumbers(l1, l2).toString());
+                new ListNode(9, new ListNode(9)));
+        System.out.println("12399+399= 12798 : " + addTwoNumbers(l1, l2).toString());
 
 
         l1 = new ListNode(9,
@@ -89,7 +88,7 @@ public class LinkedListSum {
                                         new ListNode(9)))));
         l2 = new ListNode(9,
                 new ListNode(0, new ListNode(9)));
-        System.out.println("99999+909= 100908 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("99999+909= 100908 : " + addTwoNumbers(l1, l2).toString());
 
 
         l1 = new ListNode(9,
@@ -98,28 +97,28 @@ public class LinkedListSum {
                                 new ListNode(9,
                                         new ListNode(9)))));
         l2 = new ListNode(0);
-        System.out.println("99999+0= 99999 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("99999+0= 99999 : " + addTwoNumbers(l1, l2).toString());
 
         l1 = new ListNode(9);
         l2 = new ListNode(9,
                 new ListNode(0,
                         new ListNode(9)));
-        System.out.println("9+909= 918 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("9+909= 918 : " + addTwoNumbers(l1, l2).toString());
 
         l1 = new ListNode(1,
                 new ListNode(0,
                         new ListNode(9)));
         l2 = new ListNode(9);
-        System.out.println("109+9= 118 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("109+9= 118 : " + addTwoNumbers(l1, l2).toString());
 
 
         l1 = new ListNode(6);
         l2 = new ListNode(6);
-        System.out.println("6+6= 12 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("6+6= 12 : " + addTwoNumbers(l1, l2).toString());
 
         l1 = new ListNode(6);
         l2 = new ListNode(0);
-        System.out.println("6+0= 6 : " +addTwoNumbers(l1, l2).toString());
+        System.out.println("6+0= 6 : " + addTwoNumbers(l1, l2).toString());
 
     }
 

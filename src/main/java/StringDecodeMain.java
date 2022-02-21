@@ -1,6 +1,14 @@
 public class StringDecodeMain {
 
 
+    public static void main(String[] args) {
+
+        StringDecodeMain c = new StringDecodeMain();
+        System.out.println(c.decodeString("2[abc]3[cd]ef"));
+        System.out.println(c.decodeString("a2[bc3[d]]"));
+        System.out.println(c.decodeString("100[leetcode]"));
+    }
+
     /**
      * Input: s = "2[abc]3[cd]ef"
      * Output: "abcabccdcdcdef"
@@ -24,14 +32,13 @@ public class StringDecodeMain {
 
             StringBuilder numberBuilder = new StringBuilder();
 
-            while(isNumber(str.charAt(i))){
+            while (isNumber(str.charAt(i))) {
                 foundNumber = true;
                 numberBuilder.append(str.charAt(i));
                 i++;
             }
 
-            if(foundNumber)
-            {
+            if (foundNumber) {
                 i--;
 
                 int number = Integer.parseInt(numberBuilder.toString());
@@ -55,8 +62,7 @@ public class StringDecodeMain {
                 }
 
                 i = j;
-            }
-            else {
+            } else {
                 toReturn.append(str.charAt(i));
             }
         }
@@ -65,18 +71,9 @@ public class StringDecodeMain {
 
     }
 
-
     private boolean isNumber(char aChar) {
         return aChar == '0' || aChar == '1' || aChar == '2' || aChar == '3' ||
                 aChar == '4' || aChar == '5' || aChar == '6' || aChar == '7' || aChar == '8' || aChar == '9';
-    }
-
-    public static void main(String[] args) {
-
-        StringDecodeMain c = new StringDecodeMain();
-        System.out.println(c.decodeString("2[abc]3[cd]ef"));
-        System.out.println(c.decodeString("a2[bc3[d]]"));
-        System.out.println(c.decodeString("100[leetcode]"));
     }
 
 }

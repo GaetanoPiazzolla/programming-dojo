@@ -38,11 +38,7 @@ public class FindPermutationsOfGivenSubstring {
             }
         }
 
-        if (chars2.size() == 0) {
-            return true;
-        }
-
-        return false;
+        return chars2.size() == 0;
     }
 
     private static boolean isPermutationCountChar(String first, String second) {
@@ -94,7 +90,7 @@ public class FindPermutationsOfGivenSubstring {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         assert (isPermutationCountChar("abab", "aabb"));
         assert (!isPermutationCountChar("abadb", "aabb"));

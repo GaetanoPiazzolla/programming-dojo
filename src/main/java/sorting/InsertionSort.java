@@ -19,10 +19,10 @@ public class InsertionSort {
         for (int i = 0; i < array.length; i++) {
             int current = array[i];
             int j;
-            for (j = i-1; j >= 0 && array[j] > current; j--) {
-                array[j+1] = array[j];
+            for (j = i - 1; j >= 0 && array[j] > current; j--) {
+                array[j + 1] = array[j];
             }
-            array[j+1] = current;
+            array[j + 1] = current;
         }
     }
 

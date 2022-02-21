@@ -14,10 +14,10 @@ public class PopulatingNextRightPointersinEachNodeII {
      * <p>
      * Input: root = [1,2,3,4,5,null,7]
      * Output: [1,#,2,3,#,4,5,7,#]
-     *
+     * <p>
      * Explanation: Given the above binary tree (Figure A),
-     *  your function should populate each next pointer to point to its next right node,
-     *  The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
+     * your function should populate each next pointer to point to its next right node,
+     * The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
      */
     public Node connect(Node root) {
         traverse(root, 0, new ArrayList<Node>());
@@ -42,7 +42,7 @@ public class PopulatingNextRightPointersinEachNodeII {
 
     }
 
-    public Node anotherOne(Node root){
+    public Node anotherOne(Node root) {
         Queue<Node> q = new LinkedList<Node>();
         if (root != null) {
             q.offer(root);

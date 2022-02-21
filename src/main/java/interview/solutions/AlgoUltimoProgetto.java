@@ -6,11 +6,11 @@ public class AlgoUltimoProgetto {
 
         int pos = s;
 
-        if( m > n ){
+        if (m > n) {
             m = m % n;
         }
 
-        while(m > 1) {
+        while (m > 1) {
             m--;
             pos++;
             if (pos > n) {

@@ -1,6 +1,8 @@
 package hard;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BurstBalloonsRecursiveMaxCoins {
 
@@ -19,9 +21,7 @@ public class BurstBalloonsRecursiveMaxCoins {
 
         if (nums.length == 1) {
             maxCoins = nums[0];
-        }
-
-        else {
+        } else {
             int hash = Arrays.hashCode(nums);
             if (cache.containsKey(hash)) {
                 maxCoins = cache.get(hash);
@@ -69,7 +69,7 @@ public class BurstBalloonsRecursiveMaxCoins {
 
         int n = nums.length;
 
-        int dp[][] = new int[n + 1][n + 1];
+        int[][] dp = new int[n + 1][n + 1];
 
         for (int len = 1; len <= n; len++) {
 
@@ -120,16 +120,16 @@ public class BurstBalloonsRecursiveMaxCoins {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{3,4,3,5,0,1,0,2,1,1,1};
+        int[] array = new int[]{3, 4, 3, 5, 0, 1, 0, 2, 1, 1, 1};
         long start;
 
         start = System.currentTimeMillis();
         System.out.println(maxCoinsPro(array));
-        System.out.println("this algorithm spent: " +(System.currentTimeMillis() - start));
+        System.out.println("this algorithm spent: " + (System.currentTimeMillis() - start));
 
         start = System.currentTimeMillis();
         System.out.println(maxCoins(array));
-        System.out.println("my algoritm spent: "+ (System.currentTimeMillis() - start));
+        System.out.println("my algoritm spent: " + (System.currentTimeMillis() - start));
 
     }
 

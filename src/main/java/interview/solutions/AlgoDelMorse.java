@@ -1,22 +1,30 @@
 package interview.solutions;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class AlgoDelMorse {
 
+    public static void main(String[] args) {
+
+        AlgoDelMorse m = new AlgoDelMorse();
+        System.out.println(m.uniqueMorseRepresentations2(new String[]{"gin", "zen", "gig", "msg"}));
+
+    }
+
     public int uniqueMorseRepresentations(String[] words) {
 
-        String[] MORSE = new String[]{".-","-...","-.-.","-..",".","..-.","--.",
-                "....","..",".---","-.-",".-..","--","-.",
-                "---",".--.","--.-",".-.","...","-","..-",
-                "...-",".--","-..-","-.--","--.."};
+        String[] MORSE = new String[]{".-", "-...", "-.-.", "-..", ".", "..-.", "--.",
+                "....", "..", ".---", "-.-", ".-..", "--", "-.",
+                "---", ".--.", "--.-", ".-.", "...", "-", "..-",
+                "...-", ".--", "-..-", "-.--", "--.."};
 
         Set<String> solutions = new HashSet();
 
         for (String word : words) {
             StringBuilder sb = new StringBuilder();
-            for(int i=0;i<word.length();i++)
-            {
+            for (int i = 0; i < word.length(); i++) {
                 sb.append(MORSE[word.charAt(i) - 'a']);
             }
             solutions.add(sb.toString());
@@ -66,13 +74,6 @@ public class AlgoDelMorse {
         }
 
         return solutions.size();
-    }
-
-    public static void main(String[] args) {
-
-        AlgoDelMorse m = new AlgoDelMorse();
-        System.out.println(m.uniqueMorseRepresentations2(new String[]{"gin","zen","gig","msg"}));
-
     }
 
 }

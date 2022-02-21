@@ -30,7 +30,7 @@ public class AlgoDellAzzeramento {
         int number = 0;
 
         for (int i = 0; i < S.length(); i++) {
-            if (S.charAt( S.length() - i - 1 ) == '1') {
+            if (S.charAt(S.length() - i - 1) == '1') {
                 number += potenza(2, i);
             }
         }

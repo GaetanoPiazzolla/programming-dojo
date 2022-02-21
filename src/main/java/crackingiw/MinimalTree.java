@@ -1,6 +1,5 @@
 package crackingiw;
 
-import structures.Node;
 import structures.TreeNode;
 
 public class MinimalTree {

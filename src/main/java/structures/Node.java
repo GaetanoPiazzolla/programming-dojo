@@ -20,4 +20,4 @@ public class Node {
         next = _next;
     }
 
-};
+}

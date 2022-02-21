@@ -25,15 +25,11 @@ public class StringArrayEquivalence {
                 if (!partial2.startsWith(partial1)) {
                     return false;
                 }
-            }
-            else if(partial1.length() == partial2.length())
-            {
-                if(!partial1.equals(partial2))
-                {
+            } else if (partial1.length() == partial2.length()) {
+                if (!partial1.equals(partial2)) {
                     return false;
                 }
-            }
-            else{
+            } else {
                 if (!partial1.startsWith(partial2)) {
                     return false;
                 }
@@ -57,6 +53,6 @@ public class StringArrayEquivalence {
 //        System.out.println("true: "+ arrayStringsAreEqual(new String[]{"a","bc","d"},new String[]{"a","bcd"}));
 //        System.out.println("false: "+ arrayStringsAreEqual(new String[]{"a","bc","d"},new String[]{"a","bc"}));
 //        System.out.println("true: "+ arrayStringsAreEqual(new String[]{"a","","bcd"},new String[]{"a","bc","d"}));
-        System.out.println("true: "+ arrayStringsAreEqual(new String[]{"fvnzyxfmvtsezl"},new String[]{"f","v","nzyx","fmvt","sez","l"}));
+        System.out.println("true: " + arrayStringsAreEqual(new String[]{"fvnzyxfmvtsezl"}, new String[]{"f", "v", "nzyx", "fmvt", "sez", "l"}));
     }
 }

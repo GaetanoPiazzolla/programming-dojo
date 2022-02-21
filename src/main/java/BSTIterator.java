@@ -11,6 +11,27 @@ public class BSTIterator {
         head = ans.right;
     }
 
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(7,
+
+                new TreeNode(3),
+
+                new TreeNode(15, new TreeNode(9), new TreeNode(20)));
+
+        BSTIterator obj = new BSTIterator(root);
+
+        System.out.println(obj.next());
+        System.out.println(obj.next());
+        System.out.println(obj.next());
+        System.out.println(obj.next());
+        System.out.println(obj.hasNext());
+        System.out.println(obj.next());
+        System.out.println(obj.hasNext());
+
+
+    }
+
     private void generateIncreasingOrderTree(TreeNode node) {
 
         if (node != null) {
@@ -33,28 +54,6 @@ public class BSTIterator {
 
     public boolean hasNext() {
         return head != null;
-    }
-
-    public static void main(String[] args) {
-
-        TreeNode root = new TreeNode(7,
-
-                new TreeNode(3),
-
-                new TreeNode(15, new TreeNode(9), new TreeNode(20)));
-
-        BSTIterator obj = new BSTIterator(root);
-
-        System.out.println(obj.next());
-        System.out.println(obj.next());
-        System.out.println(obj.next());
-        System.out.println(obj.next());
-        System.out.println(obj.hasNext());
-        System.out.println(obj.next());
-        System.out.println(obj.hasNext());
-
-
-
     }
 
 }

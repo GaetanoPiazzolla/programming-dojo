@@ -40,11 +40,11 @@ public class RomanToInt {
 
     public static void main(String[] args) {
 
-        System.out.println("3-"+ RomanToInt.romanToInt("III"));
-        System.out.println("4-"+ RomanToInt.romanToInt("IV"));
-        System.out.println("9-"+ RomanToInt.romanToInt("IX"));
-        System.out.println("58-"+ RomanToInt.romanToInt("LVIII"));
-        System.out.println("1994-"+ RomanToInt.romanToInt("MCMXCIV"));
+        System.out.println("3-" + RomanToInt.romanToInt("III"));
+        System.out.println("4-" + RomanToInt.romanToInt("IV"));
+        System.out.println("9-" + RomanToInt.romanToInt("IX"));
+        System.out.println("58-" + RomanToInt.romanToInt("LVIII"));
+        System.out.println("1994-" + RomanToInt.romanToInt("MCMXCIV"));
 
     }
 

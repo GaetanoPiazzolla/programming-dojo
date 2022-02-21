@@ -37,9 +37,7 @@ public class ValidSquare {
             set.add(spacialDistance(p3, p2));
             set.add(spacialDistance(p3, p4));
             set.add(spacialDistance(p4, p2));
-        }
-        catch(NullPointerException e)
-        {
+        } catch (NullPointerException e) {
             return false;
         }
 

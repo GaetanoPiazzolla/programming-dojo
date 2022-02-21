@@ -9,8 +9,7 @@ public class Intervals {
     public static int solution(int[] A, int[] B) {
         // write your code in Java SE 8
 
-        if(A == null || A.length == 0)
-        {
+        if (A == null || A.length == 0) {
             return 0;
         }
 
@@ -18,14 +17,13 @@ public class Intervals {
 
         int interval = 0;
 
-        for(int i=0;i<A.length;i++) {
+        for (int i = 0; i < A.length; i++) {
 
             int max = B[i];
 
-            while (i < A.length - 1 && max >= A[i + 1] ) {
-                if(B[i+1]>max)
-                {
-                    max = B[i+1];
+            while (i < A.length - 1 && max >= A[i + 1]) {
+                if (B[i + 1] > max) {
+                    max = B[i + 1];
                 }
                 i++;
 

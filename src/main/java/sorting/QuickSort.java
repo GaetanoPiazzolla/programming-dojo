@@ -16,7 +16,7 @@ public class QuickSort {
 
     // overloading
     private static void sort(int[] array) {
-        sort(array,0,array.length-1);
+        sort(array, 0, array.length - 1);
     }
 
     private static void sort(int[] array, int lowIndex, int highIndex) {
@@ -56,7 +56,6 @@ public class QuickSort {
         array[index1] = array[index2];
         array[index2] = temp;
     }
-
 
 
 }

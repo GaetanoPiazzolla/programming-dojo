@@ -20,31 +20,16 @@ public class PairOfSongsDivisible {
                     numPairs += sumFactorial(count[i] - 1);
                     count[i] = 0;
                 }
-            }
-            else {
+            } else {
                 if (count[i] > 0 && count[60 - i] > 0) {
-                    numPairs+= count[i] * count[60 - i];
+                    numPairs += count[i] * count[60 - i];
                     count[i] = 0;
-                    count[60-i] = 0;
+                    count[60 - i] = 0;
                 }
             }
         }
 
         return numPairs;
-    }
-
-    public int bestSolution(int[] time) {
-        int remainders[] = new int[60];
-        int res = 0;
-        for(int t : time){
-            if(t % 60 == 0){
-                res += remainders[t % 60];
-            }else{
-                res += remainders[60 - t%60];
-            }
-            remainders[t%60]++;
-        }
-        return res;
     }
 
     private static int sumFactorial(int i) {
@@ -66,7 +51,7 @@ public class PairOfSongsDivisible {
         assert (numPairsDivisibleBy60(new int[]{60, 60, 60, 60, 60}) == 10);
         assert (numPairsDivisibleBy60(new int[]{60, 60, 60, 60, 60, 60}) == 15);
 
-        assert (numPairsDivisibleBy60(new int[]{1,59}) == 1);
+        assert (numPairsDivisibleBy60(new int[]{1, 59}) == 1);
         assert (numPairsDivisibleBy60(new int[]{1, 1, 59}) == 2);
         assert (numPairsDivisibleBy60(new int[]{1, 1, 59, 59}) == 4);
         assert (numPairsDivisibleBy60(new int[]{1, 1, 1, 59, 59}) == 6);
@@ -75,10 +60,23 @@ public class PairOfSongsDivisible {
         assert (numPairsDivisibleBy60(new int[]{1, 1, 1, 59, 59, 59, 0, 60}) == 10);
         assert (numPairsDivisibleBy60(new int[]{1, 1, 1, 59, 59, 59, 60, 0}) == 10);
 
-        assert (numPairsDivisibleBy60(new int[]{30,20,150,100,40}) == 3);
+        assert (numPairsDivisibleBy60(new int[]{30, 20, 150, 100, 40}) == 3);
 
 
+    }
 
+    public int bestSolution(int[] time) {
+        int[] remainders = new int[60];
+        int res = 0;
+        for (int t : time) {
+            if (t % 60 == 0) {
+                res += remainders[t % 60];
+            } else {
+                res += remainders[60 - t % 60];
+            }
+            remainders[t % 60]++;
+        }
+        return res;
     }
 
 }
