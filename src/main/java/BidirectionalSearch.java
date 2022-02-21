@@ -10,6 +10,10 @@ import java.util.stream.Stream;
 
 public class BidirectionalSearch {
 
+    /**
+     * https://stackoverflow.com/a/71205963/2768318
+     *
+     */
     public static void main(String[] args) {
 
         Graph acyclicGraph = new Graph();
