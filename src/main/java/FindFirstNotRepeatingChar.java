@@ -15,12 +15,8 @@ public class FindFirstNotRepeatingChar {
         Map<Character, Integer> nonRepeatingHash = new LinkedHashMap<>();
 
         for (int i = 0; i < input.length(); i++) {
-            Integer a = nonRepeatingHash.get(input.charAt(i));
-            if (a == null) {
-                nonRepeatingHash.put(input.charAt(i), 1);
-            } else {
-                nonRepeatingHash.put(input.charAt(i), ++a);
-            }
+            Integer a = nonRepeatingHash.getOrDefault(input.charAt(i), 0);
+            nonRepeatingHash.put(input.charAt(i), ++a);
         }
 
         for (Map.Entry<Character, Integer> entry : nonRepeatingHash.entrySet()) {
