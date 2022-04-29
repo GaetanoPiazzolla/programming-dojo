@@ -1,5 +1,3 @@
-package fb;
-
 import java.util.Arrays;
 
 public class RemoveElement {
