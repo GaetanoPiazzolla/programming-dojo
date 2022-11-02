@@ -1,4 +1,4 @@
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 public class FindFirstNotRepeatingChar {
@@ -12,16 +12,16 @@ public class FindFirstNotRepeatingChar {
             return null;
         }
 
-        Map<Character, Integer> nonRepeatingHash = new LinkedHashMap<>();
+        Map<Character, Integer> nonRepeatingHash = new HashMap<>();
 
         for (int i = 0; i < input.length(); i++) {
             Integer a = nonRepeatingHash.getOrDefault(input.charAt(i), 0);
             nonRepeatingHash.put(input.charAt(i), ++a);
         }
 
-        for (Map.Entry<Character, Integer> entry : nonRepeatingHash.entrySet()) {
-            if (entry.getValue() == 1) {
-                return entry.getKey();
+        for (int i = 0; i < input.length(); i++) {
+            if(nonRepeatingHash.get(input.charAt(i))==1){
+                return input.charAt(i);
             }
         }
 
