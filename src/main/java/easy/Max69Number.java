@@ -8,6 +8,9 @@ public class Max69Number {
      *
      * 9969 -> 9999
      * 6666 -> 9666
+     *
+     * TODO This solution has o(n) time and o(n) space
+     * what if we want to have O(1) space complexity - that means without using the char[] ?
      */
     public int maximum69Number(int num) {
 
