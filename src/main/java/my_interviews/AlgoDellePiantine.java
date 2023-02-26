@@ -17,6 +17,7 @@ public class AlgoDellePiantine {
     }
 
     public static void main(String[] args) {
+
         System.out.println("false-" + possoMetterePiantine(new int[]{1, 0, 0, 0, 1}, 2));
         System.out.println("false-" + possoMetterePiantine(new int[]{1}, 1));
         System.out.println("false-" + possoMetterePiantine(new int[]{1, 0}, 1));

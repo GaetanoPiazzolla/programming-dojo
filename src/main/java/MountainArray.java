@@ -7,7 +7,7 @@ public class MountainArray {
      * <p>
      * arr.length >= 3
      * There exists some i with 0 < i < arr.length - 1 such that:
-     * arr[0] < arr[1] < ... < arr[i - 1] < A[i]
+     * arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
      * arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
      * <p>
      * Example 1:
