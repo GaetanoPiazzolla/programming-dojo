@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Pair<T,V>{
 
-    private T left;
-    private V right;
+    public T left;
+    public V right;
 
     public Pair(T left, V right) {
         this.left = left;
